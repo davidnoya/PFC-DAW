@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PieComponent } from './shared/pie/pie.component';
 import { BienvenidaComponent } from './traslado-cuentas/component/bienvenida/bienvenida.component';
+import { LoginComponent } from './traslado-cuentas/component/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PieComponent,
-    BienvenidaComponent
+    BienvenidaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
