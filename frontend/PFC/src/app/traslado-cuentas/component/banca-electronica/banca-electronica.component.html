@@ -1,0 +1,77 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+<div class="cabecera">
+  <div class="titulo">
+    <h1>Hola, David</h1>
+    <p>Bienvenido a tu banca electrónica</p>
+  </div>
+  <div class="menu-toggle" (click)="toggleMenu()">
+    <span class="material-icons-outlined">menu</span>
+  </div>
+</div>
+
+<div class="menu-flotante" [class.abierto]="menuAbierto">
+  <ul>
+    <li><a href="">Salud Financiera</a></li>
+    <li><a href="/traslados" class="destacado">Traslado de cuentas</a></li>
+    <li><a href="">Oficinas y cajeros</a></li>
+    <li><a href="">Inversiones</a></li>
+    <li><a href="#">Cerrar sesión</a></li>
+  </ul>
+</div>
+
+<section class="resumen-grid">
+  <div class="resumen-general">
+    <h3>Resumen General</h3>
+    <div class="card resumen-totales">
+      <p><strong>Total en cuentas:</strong> {{ getTotalCuentas() | currency:'EUR' }}</p>
+      <p><strong>Último movimiento:</strong> {{ movimientos[0]?.descripcion }} ({{ movimientos[0]?.cantidad | currency:'EUR' }})</p>
+    </div>
+  </div>
+
+    <div class="resumen-novedades">
+    <h3>Novedades</h3>
+    <div class="card resumen-totales">
+      <p>Ya está disponible la nueva opción de <strong>Traslado de Cuentas</strong> vía online desde el menú de tu banca electrónica.</p>
+    </div>
+  </div>
+</section>
+
+<section class="accesos">
+  <h3>Accesos Rápidos</h3>
+  <div class="botones">
+    <button>Transferencia</button>
+    <button>Extracto</button>
+    <button>Préstamo</button>
+  </div>
+</section>
+
+<section class="cuentas">
+  <h3>Mis cuentas</h3>
+  <div class="card" *ngFor="let cuenta of cuentas">
+    <h4>{{ cuenta.tipo }}</h4>
+    <p>Nº: {{ cuenta.numero }}</p>
+    <p class="saldo">Saldo: {{ cuenta.saldo | currency:'EUR' }}</p>
+    <button class="ver-mas-btn">Ver más</button>
+  </div>
+</section>
+
+<section class="tarjetas">
+  <h3>Mis tarjetas</h3>
+  <div class="card" *ngFor="let tarjeta of tarjetas">
+    <h4>{{ tarjeta.tipo }}</h4>
+    <p>Nº: {{ tarjeta.numero }}</p>
+    <p class="disponible">Disponible: {{ tarjeta.disponible | currency:'EUR' }}</p>
+    <button class="ver-mas-btn">Ver más</button>
+  </div>
+</section>
+
+<section class="movimientos">
+  <h3>Mis movimientos</h3>
+  <div class="card" *ngFor="let mov of movimientos">
+    <p class="descripcion">{{ mov.descripcion }}</p>
+    <p class="cantidad" [ngClass]="{ 'positivo': mov.cantidad > 0, 'negativo': mov.cantidad < 0 }">
+      {{ mov.cantidad | currency:'EUR' }}
+    </p>
+  </div>
+</section>

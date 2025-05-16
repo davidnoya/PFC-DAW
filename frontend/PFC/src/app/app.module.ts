@@ -9,6 +9,7 @@ import { PieComponent } from './shared/pie/pie.component';
 import { BienvenidaComponent } from './traslado-cuentas/component/bienvenida/bienvenida.component';
 import { LoginComponent } from './traslado-cuentas/component/login/login.component';
 import { FormSolicitudComponent } from './traslado-cuentas/component/form-solicitud/form-solicitud.component';
+import { BancaElectronicaComponent } from './traslado-cuentas/component/banca-electronica/banca-electronica.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormSolicitudComponent } from './traslado-cuentas/component/form-solici
     PieComponent,
     BienvenidaComponent,
     LoginComponent,
-    FormSolicitudComponent
+    FormSolicitudComponent,
+    BancaElectronicaComponent
   ],
   imports: [
     BrowserModule,
