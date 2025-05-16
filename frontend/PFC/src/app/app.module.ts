@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { PieComponent } from './shared/pie/pie.component';
 import { BienvenidaComponent } from './traslado-cuentas/component/bienvenida/bienvenida.component';
 import { LoginComponent } from './traslado-cuentas/component/login/login.component';
+import { FormSolicitudComponent } from './traslado-cuentas/component/form-solicitud/form-solicitud.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PieComponent,
     BienvenidaComponent,
-    LoginComponent
+    LoginComponent,
+    FormSolicitudComponent
   ],
   imports: [
     BrowserModule,
