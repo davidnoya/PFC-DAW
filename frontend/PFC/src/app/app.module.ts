@@ -10,6 +10,7 @@ import { BienvenidaComponent } from './traslado-cuentas/component/bienvenida/bie
 import { LoginComponent } from './traslado-cuentas/component/login/login.component';
 import { FormSolicitudComponent } from './traslado-cuentas/component/form-solicitud/form-solicitud.component';
 import { BancaElectronicaComponent } from './traslado-cuentas/component/banca-electronica/banca-electronica.component';
+import { TrasladosComponent } from './traslado-cuentas/component/traslados/traslados.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BancaElectronicaComponent } from './traslado-cuentas/component/banca-el
     BienvenidaComponent,
     LoginComponent,
     FormSolicitudComponent,
-    BancaElectronicaComponent
+    BancaElectronicaComponent,
+    TrasladosComponent
   ],
   imports: [
     BrowserModule,

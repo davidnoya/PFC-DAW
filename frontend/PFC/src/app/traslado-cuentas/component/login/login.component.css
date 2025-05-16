@@ -1,11 +1,11 @@
-*{
+* {
   margin: 0;
-  padding: 0;;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
-.cabecera{
+.cabecera {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -13,40 +13,40 @@
   margin-bottom: 20px;
 }
 
-.cabecera .registro{
+.cabecera .registro {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-.cabecera .eregistro{
+.cabecera .eregistro {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 12px 20px;
-  background-color: rgb(140, 181, 238);
-  color: white;
+  background-color: rgb(42, 101, 214);
+  color: rgb(255, 255, 255);
   font-size: 16px;
   font-weight: 500;
   border: none;
   border-radius: 30px;
-  box-shadow: 0 5px 15px rgba(0, 119, 226, 0.4);
+  box-shadow: 0 5px 15px rgba(42, 101, 214, 0.4);
   text-decoration: none;
 }
 
-.eregistro .material-symbols-outlined{
+.eregistro .material-symbols-outlined {
   font-size: 24px;
 }
 
-.cabecera a:hover{
-  background-color: rgb(102, 157, 235);
+.cabecera a:hover {
+  background-color: rgb(30, 80, 180);
 }
 
-.cabecera p{
+.cabecera p {
   margin-right: 20px;
 }
 
-.cuerpo{
+.cuerpo {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-left: 80px;
@@ -55,64 +55,64 @@
   margin-bottom: 83px;
 }
 
-.cuerpo .info{
+.cuerpo .info {
   margin-right: 100px;
 }
 
-.cuerpo .info #hola{
+.cuerpo .info #hola {
   font-weight: bold;
   font-size: 100px;
-  color: rgb(86, 141, 218);
+  color: rgb(42, 101, 214);
   margin-bottom: 30px;
   margin-top: 10px;
 }
 
-.cuerpo .info #texto{
+.cuerpo .info #texto {
   font-size: 70px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.formulario{
+.formulario {
   display: flex;
   justify-content: center;
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 10px;
   margin-right: 20px;
-  box-shadow: 0 8px 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   text-align: center;
   width: 90%;
   height: 105%;
 }
 
-.formulario h1{
+.formulario h1 {
   text-align: center;
   margin-top: 80px;
   margin-bottom: 35px;
-  color: rgb(86, 141, 218);
+  color: rgb(42, 101, 214);
 }
 
-.formulario input{
+.formulario input {
   width: 85%;
   padding: 15px;
   margin-bottom: 15px;
-  border: 1px solid #ccc;
+  border: 1px solid rgb(204, 204, 204);
   border-radius: 5px;
   font-size: 20px;
   transition: border-color 0.3s ease;
 }
 
-.formulario input:focus{
-  border-color: rgb(86, 141, 218);
+.formulario input:focus {
+  border-color: rgb(42, 101, 214);
   outline: none;
 }
 
-.formulario button{
+.formulario button {
   width: 70%;
   padding: 15px;
-  background-color: rgb(86, 141, 218);
+  background-color: rgb(42, 101, 214);
   border: none;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 20px;
   margin-top: 15px;
@@ -121,64 +121,62 @@
   transition: background-color 0.5s ease;
 }
 
-.formulario button:hover{
-  background-color: rgb(140, 181, 238);
+.formulario button:hover {
+  background-color: rgb(30, 80, 180);
 }
 
 .alta {
   text-decoration: underline;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
-.formulario .material-symbols-outlined{
+.formulario .material-symbols-outlined {
   margin-right: 20px;
 }
 
 @media (max-width: 1170px) {
-  .cuerpo{
+  .cuerpo {
     grid-template-columns: repeat(1, 1fr);
   }
 
-  .cuerpo .info{
+  .cuerpo .info {
     margin-right: 0px;
     text-align: center;
     margin-bottom: 40px;
   }
 
-  .formulario{
+  .formulario {
     justify-self: center;
   }
-  
 }
 
-@media (max-width: 580px){
-
-  .cuerpo .info{
+@media (max-width: 580px) {
+  .cuerpo .info {
     margin-left: 80px;
     margin-right: 80px;
   }
-  .cuerpo .info #hola{
+
+  .cuerpo .info #hola {
     font-size: clamp(50px, 2vw, 100px);
   }
 
-  .cuerpo .info #texto{
+  .cuerpo .info #texto {
     font-size: clamp(25px, 2vw, 70px);
   }
 
-  .formulario{
+  .formulario {
     transform: scale(0.9);
     margin-right: 0px;
   }
 
-  .cuerpo{
+  .cuerpo {
     margin-left: 5px;
     margin-right: 5px;
   }
-
 }
 
-@media (max-width: 600px){
-  input::placeholder{
+@media (max-width: 600px) {
+  input::placeholder {
     font-size: clamp(15px, 3vw, 20px);
   }
 }

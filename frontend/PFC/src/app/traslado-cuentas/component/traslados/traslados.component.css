@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:host {
+  display: block;
+  padding: 30px 40px;
+  color: black;
+  background: white;
+}
+
+section.cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 30px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-bottom: 3px solid rgb(208, 226, 255);
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+section.cabecera .titulo h1 {
+  font-size: 34px;
+  color: #2a65d6;
+  margin-bottom: 5px;
+}
+
+section.cabecera .titulo p {
+  font-size: 16px;
+  color: #777;
+}
+
+.nueva-btn {
+  background: #2a65d6;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.nueva-btn:hover {
+  background-color: rgb(30, 77, 176);
+  transform: translateY(-2px);
+}
+
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.filtros button {
+  background-color: rgb(229, 239, 255);
+  color: rgb(42, 101, 214);
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s;
+}
+
+.filtros button:hover {
+  background: rgb(208, 226, 255);
+  transform: translateY(-1px);
+}
+
+.filtros button.activo {
+  background: rgb(42, 101, 214);
+  color: white;
+}
+
+.card {
+  background: linear-gradient(to bottom right, rgb(242, 247, 253), rgb(226, 236, 249));
+  border-radius: 16px;
+  padding: 20px 25px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+  transition: transform 0.25s ease;
+  position: relative;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card h4 {
+  font-size: 18px;
+  color: rgb(42, 101, 214);
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.ver-mas-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgb(229, 239, 255);
+  color: rgb(42, 101, 214);
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s;
+}
+
+.ver-mas-btn:hover {
+  background: rgb(201, 221, 251);
+  transform: translateY(-1px);
+}
+
+.detalle-flotante {
+  position: fixed;
+  top: 100px;
+  right: 40px;
+  width: 340px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  padding: 25px;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.detalle-flotante .cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  background: none;
+  border: none;
+  color: rgb(153, 153, 153);
+  cursor: pointer;
+}
+
+.detalle-flotante h3 {
+  font-size: 20px;
+  color: rgb(42, 101, 214);
+  margin-bottom: 15px;
+}
+
+.detalle-flotante p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: rgb(51, 51, 51);
+}
+
+.detalle-flotante ul {
+  padding-left: 20px;
+  color: rgb(51, 51, 51);
+}
+
+.detalle-flotante li {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
