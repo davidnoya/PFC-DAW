@@ -2,6 +2,8 @@
 
 Este proyecto es una aplicación web que digitaliza el proceso de traslado de cuentas bancarias entre entidades, proporcionando una solución moderna, accesible y realista inspirada en un entorno financiero real.
 
+<img src="https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2024/09/gestionar-dinero-4091721.jpg?tf=1200x" width="600">
+
 ---
 
 ## 📌 Índice
