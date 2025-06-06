@@ -1,0 +1,88 @@
+<main>
+    <h1>Solicitud de Traslado de Cuentas</h1>
+    <hr><br>
+    
+    <form>
+        <div class="grid">
+            <div class="campo">
+                <label>IBAN de la cuenta antigua</label>
+                <input type="text" name="iban-antiguo" placeholder="ES..." required minlength="24" maxlength="29" />
+            </div>
+            
+            <div class="campo">
+                <label>Entidad financiera de la cuenta antigua:</label>
+                <select name="entidad-antigua" required>
+                    <option value="">Selecciona una entidad:</option>
+                    <option value="ABANCA">ABANCA</option>
+                    <option value="Santander">Santander</option>
+                    <option value="BBVA">BBVA</option>
+                    <option value="CaixaBank">CaixaBank</option>
+                    <option value="Sabadell">Sabadell</option>
+                    <option value="Bankinter">Bankinter</option>
+                    <option value="otra">Otra</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="tarjeta seccion">
+            <h2>Peticiones del/los solicitantes para proceder al traslado:</h2>
+            <p>Mediante la presente autorización, otorga/n su consentimiento específico para que en el plazo máximo de dos días hábiles procedan a solicitar al "proveedor transmisor" (marcar las opciones deseadas):</p>
+            <div class="checkboxes">
+                <label><input type="checkbox" name="peticiones" value="A"/>A) Información de las órdenes permanentes de transferencia vinculadas a la cuenta indicada y la cancelación de estas últimas, no antes de la fecha indicada en la autorización <a href="/solicitud#pie">(1)</a>.</label>
+                <label><input type="checkbox" name="peticiones" value="B"/>B) Información disponible de las transferencias entrantes periódicas y adeudos domiciliados ejecutados con cargo a la cuenta en los 13 últimos meses, y cese de su aceptación a partir de la fecha indicada en la autorización <a href="/solicitud#pie">(1)</a>.</label>
+                <label><input type="checkbox" name="peticiones" value="C"/>C) Transferencia del saldo existente a la nueva cuenta en la fecha indicada en la autorización <a href="/solicitud#pie">(1)</a> y cierre de la cuenta a traspasar.</label>
+                <label><input type="checkbox" name="peticiones" value="D"/>D) Transmisión al/los titular/es de la información solicitada en los apartados A y B.</label>
+            </div>
+        </div>
+
+        <div class="grid2">
+            <div class="campo">
+                <label>Fecha de ejecución del traslado:</label>
+                <input type="date" name="fecha-traslado" required />
+            </div>
+            
+            <div class="campo">
+                <label>IBAN de la nueva cuenta:</label>
+                <input type="text" name="iban-nuevo" placeholder="ES..." required minlength="24" maxlength="29" />
+            </div>
+        </div>
+    
+        <div class="tarjeta seccion">
+            <h2>Actuaciones a seguir por el proveedor receptor:</h2>
+            <p>Asimismo, autorizo al "proveedor receptor" para que, una vez reciba la información necesaria para el traslado del "proveedor transmisor", proceda de acuerdo con las siguientes instrucciones en el plazo máximo de cinco días hábiles:</p>
+            <div class="checkboxes">
+                <label><input type="checkbox" name="actuaciones" value="A"/>A) Habilitar las órdenes permanentes de transferencia con cargo a mi cuenta a partir de la fecha indicada en la autorización <a href="/solicitud#pie">(1)</a>.</label>
+                <label><input type="checkbox" name="actuaciones" value="B"/>B) Aceptar los adeudos domiciliados con cargo a mi cuenta a partir de la fecha indicda en la autorización <a href="/solicitud#pie">(1)</a>.</label>
+                <label><input type="checkbox" name="actuaciones" value="C"/>C) Comunicar a los emisores que efectúen transferencias entrantes periódicas y adeudos domiciliados, de los datos de mi nueva cuenta, así como la transmisión a estos emisores de una copia de la presente autorización.</label>
+            </div>
+        </div>
+        
+        <h2 id="titulares">Titulares</h2>
+        <div class="grid">
+            <div class="campo">
+                <label>Nombre y Apellidos:</label>
+                <input type="text" name="titular" required />
+            </div>
+            <div class="campo">
+                <label>NIF/NIE:</label>
+                <input type="text" name="nif" required minlength="9" maxlength="9" />
+            </div>
+        </div>
+        
+        <h2>Tutores o Representantes</h2>
+        <div class="grid">
+            <div class="campo">
+                <label>Nombre y Apellidos:</label>
+                <input type="text" name="representante" />
+            </div>
+            <div class="campo">
+                <label>NIF/NIE:</label>
+                <input type="text" name="repre-nif" minlength="9" maxlength="9" />
+            </div>
+        </div>
+        
+        <button type="submit">Enviar solicitud</button>
+        <hr>
+        <p id="pie">1. La fecha de ejecución del traslado no podrá ser anterior a la resultante de añadir 13 días hábiles desde la fecha de envío de esta solicitud.</p>
+    </form>
+    </main>

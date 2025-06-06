@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<div class="cabecera">
+    <h1></h1>
+    <!-- <img src="https://cdn.abanca.io/assets/logos/abanca.svg"> -->
+    <div class="registro">
+        <p>¿Aún no eres cliente?</p>
+        <a class="eregistro" href="/registro"><span class="material-symbols-outlined">assignment</span>Darme de alta</a>
+    </div>
+</div>
+<hr>
+<div class="cuerpo">
+    <div class="info">
+        <p id="hola">Hola!</p>
+        <p id="texto">{{texto}}</p>
+    </div>
+    <div class="formulario">
+        <form (ngSubmit)="onSubmit()">
+            <h1>Banca Electrónica</h1>
+            <span class="material-symbols-outlined">badge</span>
+            <input type="string" id="dni" name="dni" [(ngModel)]="dni" placeholder="Documento Nacional de Identidad" minlength="9" maxlength="9" required>
+            <br>
+            <span class="material-symbols-outlined">password</span>
+            <input type="string" id="pin" name="pin" [(ngModel)]="pin" placeholder="PIN de Banca Electrónica" minlength="6" maxlength="6" required>
+    
+            <button type="submit">Entrar</button>
+            <br><br><br><br><br>
+            <a class="alta" href="/registro">No tengo banca electrónica</a><br><br>
+            <a class="alta" href="/banca-electronica">acceso a banca electrónica (temporal)</a>
+        </form>
+    </div> 
+    <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+</div>
