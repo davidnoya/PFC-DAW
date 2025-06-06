@@ -2,7 +2,7 @@
 
 <div class="cabecera">
   <div class="titulo">
-    <h1>Hola, David</h1>
+    <h1>Hola Cliente</h1>
     <p>Bienvenido a tu banca electrónica</p>
   </div>
   <div class="menu-toggle" (click)="toggleMenu()">
@@ -12,12 +12,23 @@
 
 <div class="menu-flotante" [class.abierto]="menuAbierto">
   <ul>
-    <li><a href="/salud">Salud Financiera</a></li>
+    <li><a href="">Salud Financiera</a></li>
     <li><a href="/traslados" class="destacado">Traslado de cuentas</a></li>
-    <li><a href="/oficinas">Oficinas y cajeros</a></li>
-    <li><a href="/inversiones">Inversiones</a></li>
-    <li><a href="#">Cerrar sesión</a></li>
+    <li><a href="">Oficinas y cajeros</a></li>
+    <li><a href="">Inversiones</a></li>
+    <li><a><button class="link-style" (click)="abrirAlerta()">Cerrar sesión</button></a></li>
   </ul>
+</div>
+
+<div class="alerta-flotante" *ngIf="alertaVisible">
+  <div class="alerta-contenido">
+    <h3>¿Estás seguro?</h3>
+    <p>¡Tu sesión se cerrará!</p>
+    <div class="alerta-botones">
+      <button (click)="cerrarAlerta()">Cancelar</button>
+      <button class="confirmar" (click)="confirmarLogout()">Sí, cerrar</button>
+    </div>
+  </div>
 </div>
 
 <section class="resumen-grid">
@@ -29,7 +40,7 @@
     </div>
   </div>
 
-    <div class="resumen-novedades">
+  <div class="resumen-novedades">
     <h3>Novedades</h3>
     <div class="card resumen-totales">
       <p>Ya está disponible la nueva opción de <strong>Traslado de Cuentas</strong> vía online desde el menú de tu banca electrónica.</p>

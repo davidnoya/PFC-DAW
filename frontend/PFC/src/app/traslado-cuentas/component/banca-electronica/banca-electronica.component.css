@@ -8,8 +8,8 @@
 }
 
 body, html {
-  background: linear-gradient(to bottom right, rgb(242, 247, 253), rgb(226, 236, 249));
-  color: rgb(26, 26, 26);
+  background: linear-gradient(to bottom right, #f2f7fd, #e2ecf9);
+  color: #1a1a1a;
 }
 
 .cabecera {
@@ -17,25 +17,25 @@ body, html {
   justify-content: space-between;
   align-items: center;
   padding: 30px 40px;
-  background: rgb(255, 255, 255);
+  background: #ffffff;
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-  border-bottom: 3px solid rgb(208, 226, 255);
+  border-bottom: 3px solid #d0e2ff;
 }
 
 .cabecera .titulo h1 {
   font-size: 34px;
-  color: rgb(42, 101, 214);
+  color: #2a65d6;
   margin-bottom: 5px;
 }
 
 .cabecera .titulo p {
   font-size: 16px;
-  color: rgb(119, 119, 119);
+  color: #777;
 }
 
 .menu-toggle {
   font-size: 30px;
-  color: rgb(42, 101, 214);
+  color: #2a65d6;
   cursor: pointer;
   transition: transform 0.2s;
 }
@@ -75,7 +75,7 @@ body, html {
 }
 
 .menu-flotante a {
-  color: rgb(42, 101, 214);
+  color: #2a65d6;
   text-decoration: none;
   font-size: 15px;
   padding: 10px;
@@ -84,14 +84,24 @@ body, html {
   transition: background-color 0.2s ease;
 }
 
+.menu-flotante ul li button.link-style {
+  color: rgb(255, 0, 0);
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
 .menu-flotante a:hover {
-  background: rgb(241, 245, 255);
+  background: #f1f5ff;
 }
 
 .menu-flotante .destacado {
-  background: rgb(214, 231, 255);
+  background: #d6e7ff;
   font-weight: 600;
-  border-left: 4px solid rgb(42, 101, 214);
+  border-left: 4px solid #2a65d6;
 }
 
 section {
@@ -100,7 +110,7 @@ section {
 
 section h3 {
   font-size: 22px;
-  color: rgb(42, 101, 214);
+  color: #2a65d6;
   margin-bottom: 15px;
 }
 
@@ -120,37 +130,37 @@ section h3 {
 
 .card h4 {
   font-size: 18px;
-  color: rgb(42, 101, 214);
+  color: #2a65d6;
   margin-bottom: 10px;
 }
 
 .card p {
   font-size: 15px;
-  color: rgb(51, 51, 51);
+  color: #333;
 }
 
 .card .ver-mas-btn {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: rgb(229, 239, 255);
-  color: rgb(42, 101, 214);
+  background: #e5efff;
+  color: #2a65d6;
   border: none;
   border-radius: 8px;
   padding: 6px 12px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s ease, transform 0.2s;
+  transition: background 0.2s ease, transform 0.2s;
 }
 
 .card .ver-mas-btn:hover {
-  background: rgb(201, 221, 251);
+  background: #c9ddfb;
   transform: translateY(-1px);
 }
 
 .resumen-general {
-  background: linear-gradient(to right, rgb(219, 233, 255), rgb(245, 250, 255));
+  background: linear-gradient(to right, #dbe9ff, #f5faff);
   border-radius: 20px;
   padding: 40px 30px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -158,8 +168,8 @@ section h3 {
 }
 
 .resumen-totales {
-  background: rgb(255, 255, 255);
-  border-left: 5px solid rgb(42, 101, 214);
+  background: #ffffff;
+  border-left: 5px solid #2a65d6;
   padding: 20px;
   border-radius: 14px;
 }
@@ -172,7 +182,7 @@ section h3 {
 }
 
 .resumen-novedades {
-  background: linear-gradient(to right, rgb(219, 233, 255), rgb(245, 250, 255));
+  background: linear-gradient(to right, #dbe9ff, #f5faff);
   border-radius: 20px;
   padding: 40px 30px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.05);
@@ -181,17 +191,17 @@ section h3 {
 
 .resumen-novedades h3 {
   font-size: 22px;
-  color: rgb(42, 101, 214);
+  color: #2a65d6;
   margin-bottom: 15px;
 }
 
 .resumen-novedades .resumen-totales {
-  background: rgb(255, 255, 255);
-  border-left: 5px solid rgb(42, 101, 214);
+  background: #ffffff;
+  border-left: 5px solid #2a65d6;
   padding: 20px;
   border-radius: 14px;
   font-size: 15px;
-  color: rgb(51, 51, 51);
+  color: #333;
 }
 
 .accesos .botones {
@@ -202,7 +212,7 @@ section h3 {
 
 .accesos button {
   flex: 1;
-  background: rgb(42, 101, 214);
+  background: #2a65d6;
   color: white;
   padding: 12px 16px;
   border: none;
@@ -211,16 +221,16 @@ section h3 {
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease, transform 0.2s;
+  transition: background 0.3s ease, transform 0.2s;
 }
 
 .accesos button:hover {
-  background-color: rgb(30, 77, 176);
+  background: #1e4db0;
   transform: translateY(-2px);
 }
 
 .saldo, .disponible {
-  color: rgb(29, 86, 181);
+  color: #1d56b5;
   font-weight: 600;
 }
 
@@ -232,6 +242,66 @@ section h3 {
 .movimientos .cantidad {
   font-size: 16px;
   font-weight: bold;
+}
+
+.positivo {
+  color: #4caf50;
+}
+
+.negativo {
+  color: #e53935;
+}
+
+.alerta-flotante {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.alerta-contenido {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.alerta-contenido h3 {
+  margin-top: 0;
+  color: #2a65d6;
+}
+
+.alerta-contenido p {
+  margin: 10px 0 20px;
+}
+
+.alerta-botones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.alerta-botones button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.alerta-botones .confirmar {
+  background: #2a65d6;
+  color: #fff;
+}
+
+.alerta-botones button:hover {
+  opacity: 0.9;
 }
 
 @media (max-width: 768px) {
