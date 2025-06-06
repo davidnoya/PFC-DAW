@@ -7,6 +7,7 @@ import { BancaElectronicaComponent } from './traslado-cuentas/component/banca-el
 import { TrasladosComponent } from './traslado-cuentas/component/traslados/traslados.component';
 import { RegistroComponent } from './traslado-cuentas/component/registro/registro.component';
 import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
+import { RegistroComponent } from './traslado-cuentas/component/registro/registro.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/bienvenida', pathMatch: 'full'},
