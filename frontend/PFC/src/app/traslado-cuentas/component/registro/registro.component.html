@@ -19,27 +19,29 @@
   </div>
 
   <div class="formulario">
-    <form>
+    <form [formGroup]="registroForm" (ngSubmit)="onSubmit()">
       <h1>Registro de Usuario</h1>
 
       <span class="material-symbols-outlined">person</span>
-      <input type="text" placeholder="Nombre completo" required />
+      <input type="text" formControlName="nombre" placeholder="Nombre completo" required />
       <br />
 
       <span class="material-symbols-outlined">badge</span>
-      <input type="text" placeholder="Documento Nacional de Identidad" required minlength="9" maxlength="9"/>
+      <input type="text" formControlName="dni" placeholder="Documento Nacional de Identidad" required minlength="9" maxlength="9"/>
       <br />
 
       <span class="material-symbols-outlined">mail</span>
-      <input type="email" placeholder="Correo electrónico" required />
+      <input type="email" formControlName="email" placeholder="Correo electrónico" required />
       <br />
 
       <span class="material-symbols-outlined">password</span>
-      <input type="password" placeholder="Contraseña" required minlength="6"/>
+      <input type="password" formControlName="password" placeholder="Contraseña" required minlength="6"/>
 
       <button type="submit">Registrarme</button>
       <br /><br /><br /><br /><br />
       <a class="alta" href="/login1">Ya tengo cuenta</a><br /><br />
     </form>
   </div>
+
+  <p *ngIf="errorMessage" class="error" style="color: red;">{{ errorMessage }}</p>
 </div>
