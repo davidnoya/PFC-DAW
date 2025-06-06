@@ -6,6 +6,7 @@ import { FormSolicitudComponent } from './traslado-cuentas/component/form-solici
 import { BancaElectronicaComponent } from './traslado-cuentas/component/banca-electronica/banca-electronica.component';
 import { TrasladosComponent } from './traslado-cuentas/component/traslados/traslados.component';
 import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
+import { RegistroComponent } from './traslado-cuentas/component/registro/registro.component';
 
 const routes: Routes = [
   {path: '', redirectTo: '/bienvenida', pathMatch: 'full'},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'solicitud', component: FormSolicitudComponent},
   {path: 'banca-electronica', component: BancaElectronicaComponent},
   {path: 'traslados', component: TrasladosComponent},
+  {path: 'registro', component: RegistroComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
 
