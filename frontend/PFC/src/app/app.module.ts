@@ -12,6 +12,7 @@ import { FormSolicitudComponent } from './traslado-cuentas/component/form-solici
 import { BancaElectronicaComponent } from './traslado-cuentas/component/banca-electronica/banca-electronica.component';
 import { TrasladosComponent } from './traslado-cuentas/component/traslados/traslados.component';
 import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
+import { RegistroComponent } from './traslado-cuentas/component/registro/registro.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.co
     FormSolicitudComponent,
     BancaElectronicaComponent,
     TrasladosComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
