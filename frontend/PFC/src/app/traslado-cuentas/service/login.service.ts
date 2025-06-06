@@ -1,25 +1,30 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
+
+interface LoginRequest {
+  dni: string;
+  password: string;
+}
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class LoginService {
-  private endpoint = 'http://localhost:8080/mockLoginService/validarCredenciales';
+
+  private apiUrl = "http://localhost:8082/api/login";
 
   constructor(private http: HttpClient) { }
 
-  validarCredenciales(dni: string, pin: string): Observable<any> {
-    const requestBody = {
-      dni: dni,
-      pin: pin
-    };
-
-    const headers = new HttpHeaders({
-      'Content-Type': 'application/json'
-    });
-
-    return this.http.post(this.endpoint, requestBody, { headers });
-    }
+login(dni: string, password: string): Observable<string> {
+  const body: LoginRequest = { dni, password };
+  return this.http.post(this.apiUrl, body, { responseType: 'text', withCredentials: true }).pipe(
+    catchError(this.handleError)
+  );
+}
+  private handleError(error: HttpErrorResponse) {
+    return throwError(() => error);
+  }
 }

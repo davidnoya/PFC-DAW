@@ -3,8 +3,22 @@
     <h1>Traslados de Cuentas</h1>
     <p>Consulta y gestiona las solicitudes realizadas</p>
   </div>
-  <a href="/solicitud"><button class="nueva-btn">+ Nueva solicitud</button></a>
+  <div class="botones">
+    <a href="/solicitud"><button class="nueva-btn">+ Nueva solicitud</button></a>
+    <button class="nueva-btn logout-btn" (click)="abrirAlerta()">Cerrar sesión</button>
+  </div>
 </section>
+
+<div class="alerta-flotante" *ngIf="alertaVisible">
+  <div class="alerta-contenido">
+    <h3>¿Estás seguro?</h3>
+    <p>Tu sesión se cerrará!</p>
+    <div class="alerta-botones">
+      <button (click)="cerrarAlerta()">Cancelar</button>
+      <button class="confirmar" (click)="confirmarLogout()">Sí, cerrar</button>
+    </div>
+  </div>
+</div>
 
 <section>
   <div class="filtros">
@@ -15,7 +29,7 @@
 
   <div *ngFor="let solicitud of solicitudesFiltradas" class="card">
     <h4>{{ solicitud.referencia }}</h4>
-    <p><strong>Fecha:</strong> {{ solicitud.fecha }} {{ solicitud.hora }}</p>
+    <p><strong>Fecha:</strong> {{ solicitud.fechaHora }}</p>
     <p><strong>Estado:</strong> {{ solicitud.estado }}</p>
     <p><strong>IBAN Nuevo:</strong> {{ solicitud.ibanNuevo }}</p>
     <button class="ver-mas-btn" (click)="verDetalles(solicitud)">Ver detalles</button>
@@ -27,15 +41,14 @@
     <button class="cerrar" (click)="cerrarDetalles()">×</button>
     <h3>Detalles de la Solicitud</h3>
     <p><strong>Referencia:</strong> {{ solicitudSeleccionada.referencia }}</p>
-    <p><strong>Fecha:</strong> {{ solicitudSeleccionada.fecha }} {{ solicitudSeleccionada.hora }}</p>
+    <p><strong>Fecha:</strong> {{ solicitudSeleccionada.fechaHora }}</p>
     <p><strong>Estado:</strong> {{ solicitudSeleccionada.estado }}</p>
     <p><strong>Entidad Solicitante:</strong> {{ solicitudSeleccionada.entidadSolicitante }}</p>
     <p><strong>IBAN Nuevo:</strong> {{ solicitudSeleccionada.ibanNuevo }}</p>
     <p><strong>Entidad Destinataria:</strong> {{ solicitudSeleccionada.entidadDestinataria }}</p>
-    <p><strong>IBAN Antiguo:</strong> {{ solicitudSeleccionada.cuentaAntigua }}</p>
-    <p><strong>Titulares:</strong></p>
-    <ul>
-      <li *ngFor="let titular of solicitudSeleccionada.titulares">{{ titular }}</li>
-    </ul>
+    <p><strong>IBAN Antiguo:</strong> {{ solicitudSeleccionada.ibanAntiguo }}</p>
+    <p><strong>Titular: </strong>{{ solicitudSeleccionada.titular }}</p>
+    <p><strong>Representante: </strong>{{ solicitudSeleccionada.representante }}</p>
+
   </div>
 </div>

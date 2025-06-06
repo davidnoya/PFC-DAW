@@ -5,6 +5,7 @@ import { LoginComponent } from './traslado-cuentas/component/login/login.compone
 import { FormSolicitudComponent } from './traslado-cuentas/component/form-solicitud/form-solicitud.component';
 import { BancaElectronicaComponent } from './traslado-cuentas/component/banca-electronica/banca-electronica.component';
 import { TrasladosComponent } from './traslado-cuentas/component/traslados/traslados.component';
+import { RegistroComponent } from './traslado-cuentas/component/registro/registro.component';
 import { PageNotFoundComponent } from './layout/page-not-found/page-not-found.component';
 import { RegistroComponent } from './traslado-cuentas/component/registro/registro.component';
 
