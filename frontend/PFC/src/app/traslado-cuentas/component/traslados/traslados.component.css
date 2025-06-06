@@ -55,6 +55,25 @@ section.cabecera .titulo p {
   transform: translateY(-2px);
 }
 
+.logout-btn {
+  background: #d62828;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, transform 0.2s;
+  margin-left: 15px;
+}
+
+.logout-btn:hover {
+  background-color: #a62121;
+  transform: translateY(-2px);
+}
+
 .filtros {
   display: flex;
   justify-content: center;
@@ -176,6 +195,58 @@ section.cabecera .titulo p {
 .detalle-flotante li {
   font-size: 14px;
   margin-bottom: 4px;
+}
+
+.alerta-flotante {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.alerta-contenido {
+  background: #fff;
+  padding: 40px 50px;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.alerta-contenido h3 {
+  margin-top: 0;
+  color: #2a65d6;
+}
+
+.alerta-contenido p {
+  margin: 10px 0 20px;
+}
+
+.alerta-botones {
+  display: flex;
+  justify-content: space-between;
+}
+
+.alerta-botones button {
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.alerta-botones .confirmar {
+  background: #2a65d6;
+  color: #fff;
+}
+
+.alerta-botones button:hover {
+  opacity: 0.9;
 }
 
 @keyframes fadeIn {
