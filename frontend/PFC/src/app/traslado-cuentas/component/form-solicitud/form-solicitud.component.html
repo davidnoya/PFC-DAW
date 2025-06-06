@@ -1,8 +1,18 @@
 <main>
     <h1>Solicitud de Traslado de Cuentas</h1>
     <hr><br>
+
+    <div class="alerta-flotante" *ngIf="alertaVisible">
+        <div class="alerta-contenido">
+            <h3>Solicitud enviada!</h3>
+            <p>Tu solicitud de traslado ha sido procesada correctamente.</p>
+            <div class="alerta-botones">
+                <button class="confirmar" (click)="cerrarAlerta()">Aceptar</button>
+            </div>
+        </div>
+    </div>
     
-    <form>
+    <form (submit)="enviarSolicitud($event)">
         <div class="grid">
             <div class="campo">
                 <label>IBAN de la cuenta antigua</label>
