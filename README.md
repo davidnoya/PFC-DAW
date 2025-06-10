@@ -157,7 +157,7 @@ Con ambos servidores funcionando:
 ✅ Abre tu navegador y visita [http://localhost:4200](http://localhost:4200).  
 ✅ Desde la interfaz de usuario podrás:
 
-- Iniciar sesión (login simulado, por ahora).
+- Iniciar sesión.
 - Ver paneles de banca electrónica: cuentas, tarjetas y movimientos.
 - Acceder a la sección de traslado de cuentas y crear nuevas solicitudes.
 
